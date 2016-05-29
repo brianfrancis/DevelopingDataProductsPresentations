@@ -11,28 +11,15 @@ Coursera Data Science Specialization </small>
 
 
 
-Motivation
+Motivation & Challenges
 ========================================================
 
 Quantification of gene expression in a transgenic animal 
-can be determined via RT-qPCR (reverse transciption quantitative polymerase chain reaction) assays. The technique requires comparing the cycle threshold 
-(Ct values) of the target gene to that of a reference gene (e.g., APOB).   Furthermore the unkown sample results are compared to a sample where the copies are known (a positive template control or PTC) to get the relative quantification.  
+can be determined via RT-qPCR (reverse transciption quantitative polymerase chain reaction) assays by calculating the relative quantification.  See [link](https://en.wikipedia.org/wiki/Real-time_polymerase_chain_reaction#Quantification_of_gene_expression).
 
-The prototype application created for this project assists in doing these calculations and in grouping the samples in a meaningful way (i.e., by genetic line). 
+Instrument software frequently has minimal labeling of the attributes.  In addition to performing calculations the prototype application also provides ad-hoc labeling to drive those calculations and group results sensibly.  
 
-
-
-Challenges
-========================================================
-
-Instrument software frequently has minimal labeling of the attributes. In the case of the dataset considered here, that includes only the unique identification for samples which is a concatenation of the order # under which the samples are being processed and the 
-sample number for each animal.  
-
-However animals of different genetic lines may be tested using 
-the same assays on the same PCR plate. Therefore the genetic 
-line of the samples and which PTC values should be used to 
-calculate the relative quantification are additional parameters 
-needed to perform the calculations.  
+Results are then presented both in tabularly and plotted to make interpration easier.
 
 Raw Data
 ========================================================
@@ -46,7 +33,7 @@ head(data[,c("Well",  "Sample.Name",
 
 Additional information from the user that must be provided:
 
-1. Which genetic line the samples in each Order are comprised of.
+1. Which genetic line the samples in each order are comprised of.
 2. Which PTC values to use in caculating the relative quantification.
 
 
