@@ -42,13 +42,13 @@ Calculating Relative Quantification
 
 Relative quantification is represented by the Delta Delta of the CT.  The calcuation is as follows:
 
-1.  We get take the difference of the two assays in each well on the plate. $DeltaCT_{well} = EndoCT_{well} - TargetCT_{well}$
+1.  We get take the difference target and endogenous control. $DeltaCT_{well} = EndoCT_{well} - TargetCT_{well}$
 
 2. For replicates of a single PTC we take the median. $DeltaCT_{ptcmedian} = Median(DeltaCT_{ptcwell})$
 
 3. If more than one PTC is being used in the calcuation we take the average of the medians.  $DeltaCT_{ptcmean} = Mean(DeltaCT_{ptcmedian})$
 
-4. Last we subtract the summarized delta PTC from the sample deltas.
+4. Last we subtract the mean delta PTC from the sample deltas.
 $Delta Delta = DeltaCT_{well} - DeltaCT_{ptcmean})$
 
 Conclusion

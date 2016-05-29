@@ -845,10 +845,10 @@ can be determined via RT-qPCR (reverse transciption quantitative polymerase chai
 <p>Relative quantification is represented by the Delta Delta of the CT.  The calcuation is as follows:</p>
 
 <ol>
-<li><p>We get take the difference of the two assays in each well on the plate. \( DeltaCT_{well} = EndoCT_{well} - TargetCT_{well} \)</p></li>
+<li><p>We get take the difference target and endogenous control. \( DeltaCT_{well} = EndoCT_{well} - TargetCT_{well} \)</p></li>
 <li><p>For replicates of a single PTC we take the median. \( DeltaCT_{ptcmedian} = Median(DeltaCT_{ptcwell}) \)</p></li>
 <li><p>If more than one PTC is being used in the calcuation we take the average of the medians.  \( DeltaCT_{ptcmean} = Mean(DeltaCT_{ptcmedian}) \)</p></li>
-<li><p>Last we subtract the summarized delta PTC from the sample deltas.
+<li><p>Last we subtract the mean delta PTC from the sample deltas.
 \( Delta Delta = DeltaCT_{well} - DeltaCT_{ptcmean}) \)</p></li>
 </ol>
 
